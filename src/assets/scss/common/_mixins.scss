@@ -1,0 +1,9 @@
+@mixin gray-bg($width, $height, $top, $left) {
+  position: absolute;
+  background-color: $gray;
+  z-index: -1;
+  width: $width;
+  height: $height;
+  top: $top;
+  left: $left;
+}
