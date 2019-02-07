@@ -1,7 +1,58 @@
-@@include('./templates/header.html', {
-"lang": "en",
-"title": "Home"
-})
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Home</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo:400,400italic,700italic,700" />
+  <link type="text/css" rel="stylesheet" href="https://fast.fonts.net/cssapi/5189c35d-192c-4abc-b994-712e859f8004.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.quantum.com/floatbox/floatbox.css" />
+
+  
+  <!-----------------NOTE------------------>
+  <!-- updated font awesome all.min.css to 5.6.3-->
+  <!-- font awesome JS also needs update to 5.6.3-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!-- this adds support for the new font awesome icons in the theme-->
+  <!-- <link href="/Content/qtm/all.min.css" rel="stylesheet"/> -->
+
+  <!-- for products, only the stylesheets need for the site-wide HTML are needed (nav, footer, chat)
+    If possible, remove some of these stylesheets for this specific page-->
+
+  <link href="https://www.quantum.com/Content/qtm/qdx.css" rel="stylesheet"/>
+  <link href="https://www.quantum.com/Content/qtm/owl.theme.default.css" rel="stylesheet"/>
+  <link href="https://www.quantum.com/Content/qtm/owl.carousel.css" rel="stylesheet"/>
+  <link href="https://www.quantum.com/Content/qtm/templates.css" rel="stylesheet"/>
+  <link href="https://www.quantum.com/Content/qtm/chatDrawer.css" rel="stylesheet"/>
+  <link href="https://www.quantum.com/Content/qtm/chatInlineStyles.css" rel="stylesheet"/>
+  <link href="https://www.quantum.com/Content/qtm/nav.css" rel="stylesheet"/>
+  <link href="https://www.quantum.com/Content/qtm/slick-nav.css" rel="stylesheet"/>
+  <link href="https://www.quantum.com/Content/qtm/footer.css" rel="stylesheet"/>
+  
+  <!-- newly added styles-->
+  <!-- these are the only stylesheets needed for the new page content-->
+  <link rel="stylesheet" href="assets/css/vendor.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!--If you want to use the default quantum font family, use style-2.css instead of style.css-->
+  <!-- <link rel="stylesheet" href="assets/css/style-2.css"> -->
+
+  <!--these stylesheets have no dependencies in an effort to just rely on the existing QTM dependencies.-->
+  <!-- <link rel="stylesheet" href="assets/css/products-vendor.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/products.css"> -->
+</head>
+
+<body>
+<header>
+
+</header><!--header-->
+
 
 <main>
 
@@ -846,4 +897,50 @@
 
 </main><!-- end main -->
 
-@@include('./templates/footer.html')
+<footer>
+
+</footer><!--footer-->
+
+
+<!-- if possible, only load site-wide scripts for tracking, navigation and footer on this page-->
+<script src="https://www.quantum.com/Scripts/vendor/jquery-1.12.4.min.js"></script>
+<script src="https://www.quantum.com/Scripts/vendor/jquery.actual.js"></script>
+<script src="https://www.quantum.com/Scripts/vendor/viewportSize.js"></script>
+<script src="https://www.quantum.com/Scripts/vendor/bootstrap.js"></script>
+<script src="https://www.quantum.com/Scripts/vendor/bootstrap-colequalizer.js"></script>
+<script src="https://www.quantum.com/Scripts/vendor/jquery.hoverIntent.js"></script>
+<script src="https://www.quantum.com/Scripts/vendor/font-awesome.js"></script>
+
+<!-- see comment above - Font awesome version needs to be updated or all.min.js-->
+<!-- font awesome JS also needs update to 5.6.3-->
+<!-- <script src="https://www.quantum.com/Scripts/all.min.js"></script> -->
+
+<script src="https://www.quantum.com/Scripts/navigation.js"></script>
+<script src="https://www.quantum.com/Scripts/vendor/owl.carousel.js"></script>
+<script src="https://www.quantum.com/Scripts/vendor/imagesloaded.pkgd.js"></script>
+<script src="https://www.quantum.com/Scripts/vendor/isotope.pkgd.min.js"></script>
+<script src="https://www.quantum.com/Scripts/templates.js"></script>
+<script src="https://www.quantum.com/Scripts/qdx.scripts.js"></script>
+<script src="https://www.quantum.com/Scripts/vendor/chat.js"></script>
+<script src="https://www.quantum.com/Scripts/vendor/deployment.js"></script>
+<script src="https://www.quantum.com/Scripts/home.js"></script>
+<script src="https://www.quantum.com/Scripts/cycle.js"></script>
+<script src="https://www.quantum.com/Scripts/slick-nav.js"></script>
+<script src="https://www.quantum.com/Scripts/customJSCalls.js"></script>
+<script src="https://www.quantum.com/Scripts/TrackingPixels.js"></script>
+
+
+<!-- ADDED new JS added for this page-->
+<!-- this includes dependencies -->
+<script src="assets/js/vendor.js"></script>
+<script src="assets/js/app.js"></script>
+
+<!-- this script includes no dependencies in an effort to use the current site's dependencies-->
+<!-- <script src="assets/css/products-vendor.js"></script>
+<script src="assets/css/products.js"></script> -->
+
+<script src="https://www.quantum.com/Scripts/aos.js"></script>
+
+</body>
+</html>
+
