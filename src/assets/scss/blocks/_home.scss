@@ -31,6 +31,7 @@
 
 .links-section {
   background: $white-dirty;
+  height: 75px;
 
   &.fixed {
     position: fixed;
@@ -121,7 +122,7 @@
     border-right: 1px solid $gray-light;
 
     @include media-breakpoint-down(lg) {
-      background: linear-gradient(to right, transparent, $white-dirty 70%);
+      background: linear-gradient(to right, rgba(250, 250, 250, 0), rgba(250, 250, 250, 1) 70%);
       width: 100px;
     }
 
@@ -201,20 +202,6 @@
     text-decoration: none;
     color: $white-dirty;
   }
-
-  //&--active {
-  //  color: $black;
-  //
-  //  &:before {
-  //    display: none;
-  //  }
-  //
-  //  &:active,
-  //  &:focus,
-  //  &:hover {
-  //    color: $black;
-  //  }
-  //}
 }
 
 .links-section__item.active .links-section__links {
@@ -255,9 +242,13 @@
   font-weight: 800;
 
   span {
-    @include media-breakpoint-down(lg) {
+    @media screen and (max-width: 1250px) {
       display: none;
     }
+
+    //@include media-breakpoint-down(lg) {
+    //  display: none;
+    //}
   }
 
   .fas {
@@ -461,7 +452,7 @@
       width: 0;
     }
 
-    .products__item-cell:before {
+    .products__item-cell span {
       position: absolute;
       top: -17px;
       left: 0;
@@ -469,25 +460,27 @@
       font-weight: 800;
       padding-right: 5px;
       background: $white-dirty;
-      width: max-content;
       z-index: 2;
+      width: 100%;
+      white-space: nowrap;
+      display: table;
 
       @include media-breakpoint-down(lg) {
         font-size: $big-font-size;
       }
     }
 
-    .products__item-cell--specs:before {
-      content: 'Specs';
-    }
-
-    .products__item-cell--data:before {
-      content: 'Data i/f';
-    }
-
-    .products__item-cell--features:before {
-      content: 'Key Features';
-    }
+    //.products__item-cell--specs:before {
+    //  content: 'Specs';
+    //}
+    //
+    //.products__item-cell--data:before {
+    //  content: 'Data i/f';
+    //}
+    //
+    //.products__item-cell--features:before {
+    //  content: 'Key Features';
+    //}
   }
 
   &.owl-carousel .owl-dots {
@@ -1093,6 +1086,7 @@
 
     .resources__item-content {
       border-color: $blue-light;
+      padding-left: 60px;
 
       @include media-breakpoint-down(md) {
         padding-left: 40px;
@@ -1105,10 +1099,11 @@
 
     .resources__item-description .fas {
       color: $blue-light;
+      position: absolute;
+      top: 18px;
+      left: 25px;
 
       @include media-breakpoint-down(md) {
-        position: absolute;
-        top: 18px;
         left: 10px;
       }
 
@@ -1179,12 +1174,13 @@ p.resources__item-description {
   font-size: $big-font-size;
   color: $black;
   margin-bottom: 0;
-  line-height: 1;
+  line-height: 1.2;
+  width: 70%;
 
   @include media-breakpoint-down(md) {
-    width: 60%;
     line-height: 1.3;
     margin-top: 3px;
+    width: 60%;
   }
 
   @include media-breakpoint-down(sm) {

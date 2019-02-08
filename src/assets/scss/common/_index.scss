@@ -15,16 +15,18 @@ body {
   overflow-x: hidden;
 }
 
+.main-home {
+
+  .row:after,
+  .row:before {
+    display: none;
+  }
+}
+
 .content {
   margin: 0 auto;
   max-width: 1360px;
   padding: 0 15px;
-
-  &:after {
-    content: '';
-    display: table;
-    clear: both;
-  }
 }
 
 h1 {
@@ -105,12 +107,6 @@ select {
 
   @include media-breakpoint-down(lg) {
     padding: 50px 0;
-  }
-  
-  &:after {
-    content: '';
-    display: table;
-    clear: both;
   }
 }
 
