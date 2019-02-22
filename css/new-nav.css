@@ -525,6 +525,7 @@ header .list-tag {
   text-transform: uppercase;
   margin-left: 10px;
   margin-bottom: 2px;
+  line-height: 1.7;
 }
 header .inner_menu_wrap ul.w_tags li a:hover, header .inner_menu_wrap ul.w_tags li a:focus, header .inner_menu_wrap ul.menu_posts_list li a:hover, header .inner_menu_wrap ul.menu_posts_list li a:focus {
   color: #0075ba;
