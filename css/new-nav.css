@@ -491,6 +491,10 @@ header .inner_menu_wrap ul:not(.w_tags):not(.menu_posts_list) li a:hover, header
 header .arrow-wrap, header .tag-wrap {
   display: inline-block;
 }
+header .inner_menu_wrap li {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-weight: 400;
+}
 header .inner_menu_wrap ul.w_tags li a {
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
@@ -511,7 +515,7 @@ header .inner_menu_wrap ul.w_tags li a span {
 }
 header .list-tag {
   font-size: 12px;
-  padding: 4px 7px 2px;
+  padding: 3px 7px 2px;
   display: inline-block;
   background: #b1b9bf;
   border-radius: 3px;
