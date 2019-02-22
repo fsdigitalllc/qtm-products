@@ -459,6 +459,7 @@ header .inner_menu_wrap h4 {
   padding: 0 15px;
   margin-bottom: 15px;
   text-transform: none;
+  font-weight: bold;
 }
 header .inner_menu_wrap ul li a {
   font-size: 18px;
