@@ -5,7 +5,6 @@ header {
   width: 100%;
   margin: 0 auto;
   position: relative;
-  line-height: 1.5 !important;
 }
 
 .header > .container {
@@ -16,12 +15,10 @@ header.menu_active .main_menu li a:not(.search_btn) {
   opacity: 0;
   pointer-events: none;
 }
-
 header.menu_active .main_menu li a.global_link {
 	opacity:1;
 	pointer-events: all;
 }
-
 header .container {
   max-width: 1600px;
   width: 100%;
@@ -67,7 +64,7 @@ header .fm {
   font-weight: 500;
 }
 header .bold, header strong {
-  font-family: 'DIN Next W01 Bold', sans-serif;
+  font-family: "Colfax-Bold";
 }
 header .py-0 {
   padding-top: 0 !important;
@@ -162,15 +159,15 @@ header .header_bottom {
   top: 100%;
   width: 100%;
   margin-top: -1px;
-	overflow: hidden;
+  overflow:hidden
 }
 header.header_set .header_bottom:before {
-		content: '';
-		position: absolute;
-	/*	right: 100%;*/
-		height: 100%;
-		width: 100%;
-		background: #0075ba;
+	content:'';
+	position:absolute;
+/*	right:100%;*/
+	height:100%;
+	width:100%;
+	background:#0075ba;
 }
 header .menu_active .header_bottom {
   -webkit-box-shadow: 0px 3px 4.65px 0.35px rgba(0, 0, 0, 0.14);
@@ -200,14 +197,14 @@ header .main_menu li a {
 header .main_menu li a::after {
   display: block;
   content: attr(title);
-  font-family: 'DIN Next W01 Medium', sans-serif;
+  font-family: "Colfax-Medium";
   height: 0;
   overflow: hidden;
   visibility: hidden;
 }
 header .main_menu li:hover a {
   color: #000;
-  font-family: 'DIN Next W01 Medium', sans-serif;
+  font-family: "Colfax-Medium";
 }
 header .btn_menu.active {
   -webkit-transition: all 0.3s ease-in-out;
@@ -262,7 +259,7 @@ header .search_link_active .open_search_icon {
   display: none;
 }
 header .search_wrapper {
-  padding: 20px 15px;
+  padding: 60px 15px;
   background: #0075ba;
   display: none;
   border-radius: 0 0 10px 10px;
@@ -320,7 +317,7 @@ header .mega_menu_wrapper {
   position: relative;
   opacity: 0;
   border-radius: 0 0 10px 10px;
-  /*overflow: hidden;*/
+ /* overflow: hidden;*/
   pointer-events: none;
 }
 header .mega_menu_wrapper.mega_menu_set {
@@ -364,18 +361,24 @@ header .mega_menu_wrapper ul[class*=" lvl"] {
   padding: 27px 0px 27px 16px;
 }
 header .lvl1menu > li > a {
-  font-family: 'DIN Next W01 Bold', sans-serif;
+  font-family: "Colfax-Bold";
   color: #fff;
 }
 header .mega_menu_wrapper ul[class*=" lvl"] > li > a {
   width: 235px;
   border-radius: 7px 0 0 7px;
-  padding: 15px 0 15px 25px;
+  padding: 21px 0 19px 25px;
   display: block;
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 1.3;
   position: relative;
 }
+
+/* added a new style to prevent active menu cursor be point */
+header .mega_menu_wrapper ul[class*=" lvl"] > li.active > a {
+  cursor: default;
+}
+
 header .lvl1menu > li.active > a, header .lvl1menu > li:not(.no_submenu):hover > a {
   background: #02b7f1;
 }
@@ -397,7 +400,7 @@ header .mega_menu_wrapper ul li > .dropdown_wrapper {
   pointer-events: all;*/
 }
 header .lvl2menu > li > a {
-  font-family: 'DIN Next W01 Regular', sans-serif;
+  font-family: "Colfax-Regular";
   color: #fff;
 }
 header .lvl2menu > li.active > a, header .lvl2menu > li:not(.no_submenu):hover > a, header .res_dis_item a:hover, header .res_dis_item a:focus {
@@ -477,9 +480,9 @@ header .fa-comment.mr-1 {
 header .inner_menu_wrap h4 {
   font-size: 20px;
   margin-top: 0;
-  font-family: 'DIN Next W01 Bold', sans-serif;
+  font-family: "Colfax-Bold";
   color: #000;
-  /*padding: 0 15px;*/
+  padding: 0 15px;
   margin-bottom: 15px;
 }
 header .inner_menu_wrap ul li a {
@@ -538,7 +541,7 @@ header .list-tag {
   background: #b1b9bf;
   border-radius: 3px;
   /*margin-left: 15px;*/
-  font-family: 'DIN Next W01 Bold', sans-serif;
+  font-family: "Colfax-Bold";
   color: #fff;
   text-transform: uppercase;
   margin-left: 10px;
@@ -549,7 +552,6 @@ header .inner_menu_wrap ul.w_tags li a:hover, header .inner_menu_wrap ul.w_tags 
 }
 header a.clr-light p {
   color: #000000;
-	font-size: 18px;
 }
 header .inner_menu_wrap ul.w_tags li a:hover p, header .inner_menu_wrap ul.w_tags li a:focus p, header .inner_menu_wrap ul.menu_posts_list li a:hover p, header .inner_menu_wrap ul.menu_posts_list li a:focus p {
   color: #000000;
@@ -589,10 +591,10 @@ header .post-link-arrow {
   }
 }
 @media (max-width: 991px) {
-   header .main_menu li a {
+	header .main_menu li a {
     	padding: 24px 15px;
- 	}
-	header {
+  	}
+  header {
     /*.main_menu li a {
     	font-size: 15px;
     	padding: 31px 5px;
@@ -601,14 +603,16 @@ header .post-link-arrow {
   header .lvl2menu > li > .dropdown_wrapper {
     left: -250px !important;
   }
+
+  /* this min-height was set to make the mobile menu height auto */
   header .dropdown_wrapper {
-    min-height: 1175px;
+    min-height: auto;
   }
   header .mega_menu_wrapper ul[class*=" lvl"] {
     padding-left: 0;
   }
   header .mega_menu_wrapper ul[class*=" lvl"] > li > a:after, header .no_submenu a:after {
-    content: "\f054";
+    content: "";
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
@@ -717,7 +721,7 @@ header .post-link-arrow {
     padding: 14px 15px 14px 15px;
   }
   header .search_wrapper {
-    padding: 15px 15px;
+    padding: 50px 15px;
   }
   header .search_wrapper input[type=search] {
     font-size: 16px;
@@ -740,22 +744,24 @@ header .post-link-arrow {
   header .main_menu li:not(:last-child) {
     display: none;
   }
-	header .main_menu li:nth-last-child(2) {
-	display: inline-block;
-	}
+  header .main_menu li:nth-last-child(2) {
+	display:inline-block;
+}
 }
 @media (max-width: 480px) {
   header .logo, header .logo svg {
-    /*max-width: 150px;*/
-	  max-width: 120px;
+   /* max-width: 150px;*/
+   max-width: 120px
   }
   header .or {
     display: block;
   }
+  /* this min-height was set to make the mobile menu height auto */
   header .dropdown_wrapper {
-    min-height: 1400px;
+    min-height: auto;
   }
 }
+
 	.align-items-center {
     -webkit-box-align: center!important;
     -ms-flex-align: center!important;
