@@ -169,7 +169,7 @@ header.header_set .header_bottom:before {
 	width:100%;
 	background:#0075ba;
 }
-header .menu_active .header_bottom {
+header.menu_active .header_bottom {
   -webkit-box-shadow: 0px 3px 4.65px 0.35px rgba(0, 0, 0, 0.14);
   box-shadow: 0px 3px 4.65px 0.35px rgba(0, 0, 0, 0.14);
   /*max-width: 1600px;
