@@ -1,0 +1,192 @@
+footer {
+    color: #0f73c3;
+    background: #fff;
+    font-size: 14px;
+    text-align: center;
+    list-style: disc outside;
+    border: 0px none !important;
+}
+
+@media (min-width: 991px) {
+    footer {
+        text-align: center;
+    }
+}
+
+
+@media only screen and (max-width: 481px) {
+    footer {
+        font-size: 12px;
+    }
+}
+
+
+
+footer:before {
+    content: none;
+}
+
+footer ul {
+    padding: 0;
+}
+
+    footer ul li {
+        list-style-type: none;
+        margin-bottom: 0;
+        text-align: left;
+        padding-left: 15px;
+    }
+
+        footer ul li h4 {
+            color: #00b6f1;
+        }
+
+footer a {
+    color: #0f73c3;
+    white-space: nowrap;
+}
+
+    footer a:hover,
+    footer a:focus {
+        color: #00b6f1;
+        /*    text-decoration: none;
+*/
+    }
+
+footer .copyright {
+    padding-top: 20px;
+    font-size: 12px;
+    text-align: left;
+    padding-left: 115px;
+}
+
+footer .social {
+    font-size: 2em;
+    text-align: center;
+    padding: 0.5em 0;
+}
+
+    footer .social ul {
+        margin-bottom: 0;
+    }
+
+        footer .social ul li {
+            float: right;
+            width: 12%;
+        }
+
+footer ul li a i.fa {
+    color: #0f73c3;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+footer ul li:first-child a i.fa {
+    margin-left: 0;
+}
+
+footer ul li a i.fa:hover {
+    color: #00b6f1;
+}
+
+footer div[class*="col-"] {
+    margin-bottom: 0;
+}
+
+.social ul {
+    padding-left: 0;
+}
+
+@media only screen and (max-width: 481px) {
+    footer {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    footer .header-logo {
+        float: none;
+    }
+
+        footer .header-logo img {
+            padding-bottom: 20px;
+        }
+
+    /*footer .social {
+		float: right;
+		position: relative;
+		left: -50%;
+		text-align: left;
+	}
+	footer .social ul {
+		position: relative;
+		left: 66%;
+	}*/
+    footer .social ul li {
+        float: none;
+        display: inline-block;
+        width: 10% !important;
+    }
+
+    footer .copyright {
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    footer .copyright {
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+    }
+    /*footer .social {
+		float: right;
+		position: relative;
+		left: -50%;
+		text-align: left;
+	}
+	footer .social ul {
+		position: relative;
+		left: 50%;
+	}*/
+    footer .social ul li {
+        float: none;
+        display: inline-block;
+        width: 6%;
+    }
+}
+
+/*DS 4-18 Adding fixes for SKO Redesign*/
+@media only screen and (max-width: 481px) {
+    footer {
+        font-size: 12px;
+        line-height: 1.2;
+        padding: 0px 15px;
+    }
+
+        footer a {
+            white-space: normal !important;
+        }
+
+        footer ul li {
+            padding-left: 0 !important;
+            padding-bottom: 5px;
+        }
+}
+
+@media(max-width: 768px) {
+    footer {
+        line-height: 2;
+        padding: 0px 15px;
+    }
+
+        footer a {
+            white-space: normal !important;
+        }
+
+        footer ul li {
+            padding-left: 0 !important;
+        }
+}
