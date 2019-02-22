@@ -24,33 +24,6 @@ header .container {
   width: 100%;
   padding: 0;
 }
-
-/* body, html{
-	height: 100%;
-}
-body {
-	font-family: 'Colfax-Regular';
-	color: #000;
-	font-size:14px;
-} */
-header {
-  /* Search */
-  /* Search End */
-  /*.lvl2menu>li:hover>.dropdown_wrapper*/
-  /* .lvl2menu>li:nth-child(1)>a:after {
-  	content: "\f054";
-  	-moz-osx-font-smoothing: grayscale;
-  	-webkit-font-smoothing: antialiased;
-  	display: inline-block;
-  	font-style: normal;
-  	font-variant: normal;
-  	text-rendering: auto;
-  	line-height: 1;
-  	font-family: "Font Awesome 5 Pro";
-  	position: absolute;
-  	right: 15px;
-  } */
-}
 header a, header a:hover, header a:focus, header .trans3ms, header .trans3ms:before, header .trans3ms:after {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -64,7 +37,7 @@ header .fm {
   font-weight: 500;
 }
 header .bold, header strong {
-  font-family: "Colfax-Bold";
+  font-family: 'DIN Next W01 Bold', sans-serif;
 }
 header .py-0 {
   padding-top: 0 !important;
@@ -197,14 +170,14 @@ header .main_menu li a {
 header .main_menu li a::after {
   display: block;
   content: attr(title);
-  font-family: "Colfax-Medium";
+  font-family: 'DIN Next W01 Medium', sans-serif;
   height: 0;
   overflow: hidden;
   visibility: hidden;
 }
 header .main_menu li:hover a {
   color: #000;
-  font-family: "Colfax-Medium";
+  font-family: 'DIN Next W01 Medium', sans-serif;
 }
 header .btn_menu.active {
   -webkit-transition: all 0.3s ease-in-out;
@@ -361,7 +334,7 @@ header .mega_menu_wrapper ul[class*=" lvl"] {
   padding: 27px 0px 27px 16px;
 }
 header .lvl1menu > li > a {
-  font-family: "Colfax-Bold";
+  font-family: 'DIN Next W01 Bold', sans-serif;
   color: #fff;
 }
 header .mega_menu_wrapper ul[class*=" lvl"] > li > a {
@@ -400,7 +373,7 @@ header .mega_menu_wrapper ul li > .dropdown_wrapper {
   pointer-events: all;*/
 }
 header .lvl2menu > li > a {
-  font-family: "Colfax-Regular";
+  font-family: 'DIN Next W01 Regular', sans-serif;
   color: #fff;
 }
 header .lvl2menu > li.active > a, header .lvl2menu > li:not(.no_submenu):hover > a, header .res_dis_item a:hover, header .res_dis_item a:focus {
@@ -480,7 +453,7 @@ header .fa-comment.mr-1 {
 header .inner_menu_wrap h4 {
   font-size: 20px;
   margin-top: 0;
-  font-family: "Colfax-Bold";
+  font-family: 'DIN Next W01 Bold', sans-serif;
   color: #000;
   padding: 0 15px;
   margin-bottom: 15px;
@@ -541,7 +514,7 @@ header .list-tag {
   background: #b1b9bf;
   border-radius: 3px;
   /*margin-left: 15px;*/
-  font-family: "Colfax-Bold";
+  font-family: 'DIN Next W01 Bold', sans-serif;
   color: #fff;
   text-transform: uppercase;
   margin-left: 10px;
