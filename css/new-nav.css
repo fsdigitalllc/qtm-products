@@ -491,7 +491,7 @@ header .inner_menu_wrap ul:not(.w_tags):not(.menu_posts_list) li a:hover, header
 header .arrow-wrap, header .tag-wrap {
   display: inline-block;
 }
-header .inner_menu_wrap li {
+header .inner_menu_wrap li, header .inner_menu_wrap p {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-weight: 400;
 }
