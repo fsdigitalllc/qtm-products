@@ -135,17 +135,17 @@ jQuery($ => {
             }
         });
 
-        //Home page dropdown
-        $('.dropdown-js').click(function (e) {
-           e.preventDefault();
-           let icon = $(this).find('.fas');
-           if(icon.hasClass('fa-chevron-down')) {
-               icon.removeClass('fa-chevron-down').addClass('fa-chevron-up');
-               $('.links-section__dropdown').slideDown();
-           } else if (icon.hasClass('fa-chevron-up')) {
-               icon.removeClass('fa-chevron-up').addClass('fa-chevron-down');
-               $('.links-section__dropdown').slideUp();
-           }
+         //Home page dropdown
+         $('.dropdown-js').click(function (e) {
+            e.preventDefault();
+            let icon = $(this).find('.fas,.svg-inline--fa');
+            if (icon.hasClass('fa-chevron-down')) {
+                icon.removeClass('fa-chevron-down').addClass('fa-chevron-up');
+                $('.links-section__dropdown').slideDown();
+            } else if (icon.hasClass('fa-chevron-up')) {
+                icon.removeClass('fa-chevron-up').addClass('fa-chevron-down');
+                $('.links-section__dropdown').slideUp();
+            }
         });
 
         //Customers slider
