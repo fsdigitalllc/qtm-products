@@ -13,10 +13,16 @@ jQuery($ => {
         $('.js-scroll').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
                 var target = $(this.hash);
+                var menuHeight = $(".links-section").outerHeight();
+
+                if ($(".links-section").hasClass("fixed") ) {
+                    menuHeight = 0;
+                }
+                
                 target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
                 if (target.length) {
                     $('html,body').animate({
-                        scrollTop: target.offset().top
+                        scrollTop: target.offset().top - menuHeight,
                     }, 1000);
                     return false;
                 }
