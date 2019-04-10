@@ -85,10 +85,10 @@ jQuery(function($) {
         $('#sub_nav').scrollspy2({
             offset: -100,
             onChange: function (section) {
-                let id = section[0].getAttribute('id');
-                let item = $('.links-section__links[href="#'+id+'"]');
-                // let n = item.parents('.owl-item').not('.active').index();
-                let n = item.parents('.owl-item').index();
+                var id = section[0].getAttribute('id');
+                var item = $('.links-section__links[href="#'+id+'"]');
+                // var n = item.parents('.owl-item').not('.active').index();
+                var n = item.parents('.owl-item').index();
                 if(n < $('.links-section__list .owl-item').length -1) {
                     $('.links-section__list').trigger('to.owl.carousel', [n]);
                 }
@@ -118,11 +118,11 @@ jQuery(function($) {
 
 
         //Home page ancors fixing
-        let ancorHeight = $('.links-section__wrapper').innerHeight();
+        var ancorHeight = $('.links-section__wrapper').innerHeight();
         // $('.links-section').css('height', ancorHeight);
         $('.links-section__dropdown').css('top', ancorHeight);
 
-        let toTop = $('.links-section__wrapper').offset().top;
+        var toTop = $('.links-section__wrapper').offset().top;
         $(window).bind('scroll', function () {
             if ($(window).scrollTop() > toTop && !$('.links-section').hasClass('fixed')) {
                 $('.links-section').fadeOut(100);
@@ -138,7 +138,7 @@ jQuery(function($) {
          //Home page dropdown
          $('.dropdown-js').click(function (e) {
             e.preventDefault();
-            let icon = $(this).find('.fas,.svg-inline--fa');
+            var icon = $(this).find('.fas,.svg-inline--fa');
             if (icon.hasClass('fa-chevron-down')) {
                 icon.removeClass('fa-chevron-down').addClass('fa-chevron-up');
                 $('.links-section__dropdown').slideDown();
