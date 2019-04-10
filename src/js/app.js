@@ -1,8 +1,8 @@
 // ES6, ES7, ES8 supported
 
-jQuery($ => {
+jQuery(function($) {
 
-    $(document).ready(() => {
+    $(document).ready(function() {
 
         //AOS plugin initialization
         AOS.init({
