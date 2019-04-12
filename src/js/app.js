@@ -242,72 +242,57 @@ jQuery(function($) {
                 items: 1
             });
         }
-        var slideWrapper = document.querySelector(".owl-stage");
+        var slideWrapper = document.querySelector(".products__slider .owl-stage");
         
 
         if (slideWrapper) {
-            var slideItems = slideWrapper.querySelectorAll(".owl-item");
-            var owl = $('.owl-carousel');
+            var owl = $('.products__slider.owl-carousel');
             var theItems = $('.owl-item');
 
             owl.owlCarousel();
             // Listen to owl events:
             owl.on('translated.owl.carousel', function (event) {
-                console.log(event, "the event after move");
-                theItems.each(function (index, item) {
-                    if (index === theItems.length -1 && item.classList.contains("active")) {
-                        $(".owl-nav .owl-next span").css({
-                            '-webkit-transform' : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)',
-                            '-moz-transform'    : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)',
-                            '-ms-transform'     : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)',
-                            '-o-transform'      : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)',
-                            'transform'         : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)'
-                        });
-
-                        $(".owl-nav .owl-next span").addClass("endOf");
-
-                    } else {
-                        $(".owl-nav .owl-next span").css({
-                            '-webkit-transform' : '',
-                            '-moz-transform'    : '',
-                            '-ms-transform'     : '',
-                            '-o-transform'      : '',
-                            'transform'         : ''
-                        });
-                        $(".owl-nav .owl-next span").removeClass("endOf");
-                    }
+                //console.log(event, "the event after move");
+                var toggleButton = function (e) {
+                    //Rewind the slider
+                    owl.trigger('to.owl.carousel',0);
                     
+                    //Remove event listener after
+                    $(".owl-next").off('click', toggleButton);
+                }
+                //Get each slide
+                theItems.each(function (index, item) {
+                    //Find the last slide
+                    if (index === theItems.length -1) {
+                        //If the last slide is active in the viewport
+                        if (item.classList.contains("active")) {
+                            //Add a class incase we want to use the stylesheet later (instead of inlining the CSS)
+                            $(".owl-nav .owl-next span").addClass("endOf");
+                            //Reverse the button
+                            $(".owl-nav .owl-next span").css({
+                                '-webkit-transform' : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)',
+                                '-moz-transform'    : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)',
+                                '-ms-transform'     : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)',
+                                '-o-transform'      : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)',
+                                'transform'         : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)'
+                            });                            
+                            //Add a event listener once the last slide is reached.
+                            //This will rewind the slider instead of going next (into whitespace)
+                            $(".owl-next").on("click", toggleButton);
+
+                        } else {
+                            $(".owl-nav .owl-next span").removeClass("endOf");
+                            $(".owl-nav .owl-next span").css({
+                                '-webkit-transform' : '',
+                                '-moz-transform'    : '',
+                                '-ms-transform'     : '',
+                                '-o-transform'      : '',
+                                'transform'         : ''
+                            });
+                        }
+                    }
                 });
             });
-            owl.on('changed.owl.carousel', function(e) {
-
-                
-                
-                slideItems.forEach(function(item, index, array) {
-                    
-                    //console.log(item);
-                    // if (index === array.length -1 && item.classList.contains("active")) {
-                    //     $(".owl-nav .owl-next span").css({
-                    //         '-webkit-transform' : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)',
-                    //         '-moz-transform'    : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)',
-                    //         '-ms-transform'     : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)',
-                    //         '-o-transform'      : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)',
-                    //         'transform'         : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)'
-                    //         });
-                    //         console.log(array.length);
-                    // } else {
-                    //     $(".owl-nav .owl-next span").css({
-                    //         '-webkit-transform' : '',
-                    //         '-moz-transform'    : '',
-                    //         '-ms-transform'     : '',
-                    //         '-o-transform'      : '',
-                    //         'transform'         : ''
-                    //     });
-                    // }
-                    //console.log(index);
-                });
-                
-            }) 
         }
 
         //height block
