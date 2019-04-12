@@ -251,7 +251,8 @@ jQuery(function($) {
 
             owl.owlCarousel();
             // Listen to owl events:
-            owl.on('translated.owl.carousel', function (event) {
+            owl.on('translated.owl.carousel', checkSlides);
+
                 //console.log(event, "the event after move");
                 var toggleButton = function (e) {
                     //Rewind the slider
@@ -260,39 +261,41 @@ jQuery(function($) {
                     //Remove event listener after
                     $(".owl-next").off('click', toggleButton);
                 }
-                //Get each slide
-                theItems.each(function (index, item) {
-                    //Find the last slide
-                    if (index === theItems.length -1) {
-                        //If the last slide is active in the viewport
-                        if (item.classList.contains("active")) {
-                            //Add a class incase we want to use the stylesheet later (instead of inlining the CSS)
-                            $(".owl-nav .owl-next span").addClass("endOf");
-                            //Reverse the button
-                            $(".owl-nav .owl-next span").css({
-                                '-webkit-transform' : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)',
-                                '-moz-transform'    : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)',
-                                '-ms-transform'     : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)',
-                                '-o-transform'      : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)',
-                                'transform'         : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)'
-                            });                            
-                            //Add a event listener once the last slide is reached.
-                            //This will rewind the slider instead of going next (into whitespace)
-                            $(".owl-next").on("click", toggleButton);
 
-                        } else {
-                            $(".owl-nav .owl-next span").removeClass("endOf");
-                            $(".owl-nav .owl-next span").css({
-                                '-webkit-transform' : '',
-                                '-moz-transform'    : '',
-                                '-ms-transform'     : '',
-                                '-o-transform'      : '',
-                                'transform'         : ''
-                            });
+                function checkSlides() {
+                    //Get each slide
+                    theItems.each(function (index, item) {
+                        //Find the last slide
+                        if (index === theItems.length -1) {
+                            //If the last slide is active in the viewport
+                            if (item.classList.contains("active")) {
+                                //Add a class incase we want to use the stylesheet later (instead of inlining the CSS)
+                                $(".owl-nav .owl-next span").addClass("endOf");
+                                //Reverse the button
+                                $(".owl-nav .owl-next span").css({
+                                    '-webkit-transform' : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)',
+                                    '-moz-transform'    : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)',
+                                    '-ms-transform'     : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)',
+                                    '-o-transform'      : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)',
+                                    'transform'         : 'translateX('+ -50 + '%) rotate(' + 180 + 'deg)'
+                                });                            
+                                //Add a event listener once the last slide is reached.
+                                //This will rewind the slider instead of going next (into whitespace)
+                                $(".owl-next").on("click", toggleButton);
+
+                            } else {
+                                $(".owl-nav .owl-next span").removeClass("endOf");
+                                $(".owl-nav .owl-next span").css({
+                                    '-webkit-transform' : '',
+                                    '-moz-transform'    : '',
+                                    '-ms-transform'     : '',
+                                    '-o-transform'      : '',
+                                    'transform'         : ''
+                                });
+                            }
                         }
-                    }
-                });
-            });
+                    });
+                }
         }
 
         //height block
