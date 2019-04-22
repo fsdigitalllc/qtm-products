@@ -272,7 +272,7 @@ jQuery(function($) {
                             if ($(window).width() < 992) {
                                 if (theItems[index -1].classList.contains("active")) {
                                     //do nothing
-                                    console.log(theItems[index -1].classList);
+                                    //console.log(theItems[index -1].classList);
                                 } else {
                                     goBack();
                                 }
